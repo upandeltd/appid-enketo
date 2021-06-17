@@ -74,7 +74,7 @@
         }
     },
     "logo": {
-        "source": "public/images/kobologo.png",
+        "source": "/images/kobologo.png",
         "href": ""
     },
     "disable save as draft": false,
