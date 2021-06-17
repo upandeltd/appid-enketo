@@ -2,10 +2,10 @@ name: Build and push image to Docker Hub
 
 on:
   push:
-    # Don't waste time building every push: consider only tags, which are
-    # usually releases
+    branches:
+      - 'master'
     tags:
-      - '*'
+      -'latest'
 
 jobs:
   docker-build-push:
@@ -14,8 +14,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: mr-smithers-excellent/docker-build-push@v2
         with:
-          image: simatei/enketo-express
+          image: simatei/enketo-express:latest
           registry: docker.io
           dockerfile: Dockerfile
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
