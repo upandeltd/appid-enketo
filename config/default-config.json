@@ -4,8 +4,8 @@
     "offline enabled": true,
     "id length": 8,
     "linked form and data server": {
-        "name": "KoBoCAT",
-        "server url": "kf.kobotoolbox.org",
+        "name": "APPID",
+        "server url": "fe.africanplantpollinatorinteractions.org",
         "api key": "enketorules",
         "legacy formhub": false,
         "authentication": {
